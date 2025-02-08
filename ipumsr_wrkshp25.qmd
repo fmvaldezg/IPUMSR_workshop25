@@ -1,0 +1,138 @@
+---
+title: "Analyzing Demographic Data with IPUMS and R"
+author: "Felipe Valdez"
+format: 
+  revealjs:
+    logo: ./img/tulibraries_logo.png
+---
+
+## Workshop agenda
+
+- What is IPUMS? What kind of data can I access?
+- Getting started with ipumsr
+- Demo: Racial Inequity in Homeownership in Pennsylvania:
+1. Extracting data
+2. Downloading data
+3. Analyzing data
+4. Mapping data
+
+
+# What is IPUMS?
+
+## Integrated Public Use Microdata Series
+
+
+:::::::{.columns}
+
+:::::{.column width="50%"}
+- Harmonized census and survey data from around the world
+- Minnesota Population Center at the University of Minnesota
+:::::
+
+:::::{.column width="50%"}
+![impums.org](./img/products.png)
+:::::
+
+::::::
+
+
+## How to access IPUMS data
+
+::::::{.columns}
+
+:::::{.column}
+- Direct download from web portal
+- API (Application Programming Interface)
+- API packages: **ipumsr** and **ipumspy**
+:::::
+
+:::::{.column}
+![](./img/download.png)
+:::::
+
+::::::
+
+# Getting started with **IPUMSR**
+
+## {.invisible}
+
+:::::{.columns}
+
+::::{.column width="50%"}
+
+- R package
+- Read files downloaded from the IPUMS
+- Request data, download files, and get metadata
+
+::::
+
+::::{.column width="50%"}
+![](./img/ipumsr_logo.png)
+::::
+
+:::::
+
+## Why Use ipumsr?
+
+- Simplifies data import
+- Keeps variable labels and metadata
+- Supports microdata and GIS data
+- Works well with tidyverse and sf
+
+## Requierements..1
+
+1. Install/setup your IDE
+![](./img/ides.png)
+
+2. Create an IPUMS account [here](https://account.ipums.org/user/new)
+
+![](./img/register.png)
+
+## Requirements..2
+
+3. Get an IPUMS API key
+
+- Login to your account
+- Go to `View/create API key`
+- Copy your key (you will use it later)
+
+![](./img.key.gif)
+
+## Requirements..3
+
+4. Install the package
+
+```{.r}
+install.packages("ipumsr")
+```
+
+5. Load the library
+```{.r}
+library(ipumsr)
+```
+
+6. Save your API key in the environment
+```{.r}
+set_ipums_api_key("paste-your-api-key-here", save = TRUE)
+```
+
+## {.invisible}
+
+![](./img/options.png)
+
+## Basic functions
+
+- `read_nhgis()` when you downloaded data to your device
+- `define_extract_nhgis()` to specify the data you want to request
+- `submit_extract()` submits the extract request via the API
+- `download_extract()` downloads the data to your computer
+- `ipums_var_info()` get contextual information about variables
+
+# Demo: How is the homeownership by race in Pennsylvania?
+
+## Exploring the NHGIS datasets
+
+```{.r}
+
+```
+

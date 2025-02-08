@@ -90,13 +90,9 @@ format:
 
 ## Requirements..2
 
-3. Get an IPUMS API key
+3. Get an IPUMS API key: Login to your account > Go to `View/create API key` > Copy your key (you will use it later)
 
-- Login to your account
-- Go to `View/create API key`
-- Copy your key (you will use it later)
-
-![](./img.key.gif)
+![](https://raw.githubusercontent.com/fmvaldezg/IPUMSR_workshop25/main/img/key.gif)
 
 ## Requirements..3
 
